@@ -9,6 +9,8 @@
     <meta property="og:description" content="Денис Ляшенко: Независимый консультант по Enterprise-инфраструктуре. Технические аудиты на стыке классических СХД (On-Premise, SAN, Fibre Channel) и ИИ-архитектур. Оптимизация TCO и стратегии Cloud Repatriation.">
     <meta property="og:image" content="https://denis-infra.github.io/preview.png">
     <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -26,10 +28,6 @@
       "jobTitle": "Enterprise Infrastructure Expert",
       "description": "Проведение независимого аудита и исследований на стыке классических систем хранения данных (On-Premise, SAN, Fibre Channel) и современных ИИ-архитектур. Разработка рекомендаций по оптимизации TCO и стратегий Cloud Repatriation для корпоративного сектора.",
       "url": "https://denis-infra.github.io",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Independent Consultant"
-      },
       "sameAs": [
         "https://orcid.org/0009-0006-1469-4607",
         "https://www.linkedin.com/in/denislyashenko",
@@ -37,10 +35,14 @@
         "https://www.youtube.com/channel/UCxpMMBHxJk8d-fRgAKEJH1A",
         "https://t.me/DenisITLife_bot"
       ],
-      "alumniOf": [
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Independent Consultant"
+        },
         {
           "@type": "OrganizationRole",
-          "alumniOf": {
+          "worksFor": {
             "@type": "Organization",
             "name": "Transport Holding of Almaty city",
             "url": "http://www.tha.kz/"
@@ -52,7 +54,7 @@
         },
         {
           "@type": "OrganizationRole",
-          "alumniOf": {
+          "worksFor": {
             "@type": "Organization",
             "name": "Competent IT"
           },
@@ -63,7 +65,7 @@
         },
         {
           "@type": "OrganizationRole",
-          "alumniOf": {
+          "worksFor": {
             "@type": "Organization",
             "name": "Eltal-Borlas Consulting"
           },
@@ -74,15 +76,17 @@
         },
         {
           "@type": "OrganizationRole",
-          "alumniOf": {
+          "worksFor": {
             "@type": "Organization",
             "name": "Nursat"
           },
           "roleName": "Senior Infrastructure Consultant",
           "startDate": "2002",
           "endDate": "2007",
-          "description": "Обеспечение бесперебойной работы опорной корпоративной сети передачи данных. Траблшутинг инцидентов на сетевом оборудовании."
-        },
+          "description": "Обеспечение бесперебойной работы опорной корпоративной сети передачи данных. Траблшутинг инцидентов на сетевом оборудования."
+        }
+      ],
+      "alumniOf": [
         {
           "@type": "EducationalOrganization",
           "name": "Алматинская Академия Экономики и Статистики",
@@ -349,7 +353,20 @@
             color: var(--text-main);
         }
 
-        .output-highlight {
+        /* Обновленные стили для заголовка */
+        h1.output-highlight {
+            color: var(--accent-cyan);
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #fff;
+            display: inline;
+            margin: 0;
+            padding: 0;
+            line-height: inherit;
+        }
+        
+        /* Сохраняем поддержку старого спана на всякий случай */
+        span.output-highlight {
             color: var(--accent-cyan);
             font-weight: bold;
         }
@@ -359,14 +376,17 @@
             font-style: italic;
         }
 
-        .grid-list {
+        /* Сброс стилей для семантического списка */
+        ul.grid-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 8px;
             margin-top: 10px;
+            padding: 0;
+            list-style: none;
         }
 
-        .grid-item {
+        li.grid-item {
             color: var(--accent-orange);
             background: #202231;
             padding: 4px 10px;
@@ -406,7 +426,7 @@
 </head>
 <body>
 
-<div class="terminal-window">
+<main class="terminal-window">
     <div class="terminal-bar">
         <div class="window-buttons">
             <div class="dot dot-red"></div>
@@ -419,7 +439,7 @@
     <div class="terminal-body">
         <span class="prompt">denis@infra:~$</span><span class="command">whoami</span>
         <div class="output">
-            <span class="output-highlight" style="font-size: 1.2em; color: #fff;">Denis Lyashenko (Денис Ляшенко)</span><br>
+            <h1 class="output-highlight">Denis Lyashenko (Денис Ляшенко)</h1><br>
             Enterprise Infrastructure Expert | Storage & DR Architect<br>
             <span class="comment">Стаж в индустрии: 24 года (2002 — 2026)</span>
         </div>
@@ -431,22 +451,22 @@
 
         <span class="prompt">denis@infra:~$</span><span class="command">get --target-links</span>
         <div class="output">
-            » YouTube: <a href="https://www.youtube.com/@Storage_DR_Architect" target="_blank">Инженерный взгляд</a><br>
-            » LinkedIn: <a href="https://www.linkedin.com/in/denislyashenko" target="_blank">Denis Lyashenko</a><br>
-            » GitHub: <a href="https://github.com/denis-infra" target="_blank">denis-infra</a><br>
-            » Telegram: <a href="https://t.me/DenisITLife_bot" target="_blank">DenisITLife</a>
+            » YouTube: <a href="https://www.youtube.com/@Storage_DR_Architect" target="_blank" rel="noopener noreferrer">Инженерный взгляд</a><br>
+            » LinkedIn: <a href="https://www.linkedin.com/in/denislyashenko" target="_blank" rel="noopener noreferrer">Denis Lyashenko</a><br>
+            » GitHub: <a href="https://github.com/denis-infra" target="_blank" rel="noopener noreferrer">denis-infra</a><br>
+            » Telegram: <a href="https://t.me/DenisITLife_bot" target="_blank" rel="noopener noreferrer">DenisITLife</a>
         </div>
 
         <span class="prompt">denis@infra:~$</span><span class="command">show --core-skills</span>
         <div class="output">
-            <div class="grid-list">
-                <div class="grid-item">✦ Storage Area Networks (SAN)</div>
-                <div class="grid-item">✦ Fibre Channel & NVMe-oF</div>
-                <div class="grid-item">✦ Enterprise Storage Architecture</div>
-                <div class="grid-item">✦ Disaster Recovery & HA</div>
-                <div class="grid-item">✦ Cloud Repatriation Strategies</div>
-                <div class="grid-item">✦ AI Infrastructure Architecture</div>
-            </div>
+            <ul class="grid-list">
+                <li class="grid-item">✦ Storage Area Networks (SAN)</li>
+                <li class="grid-item">✦ Fibre Channel & NVMe-oF</li>
+                <li class="grid-item">✦ Enterprise Storage Architecture</li>
+                <li class="grid-item">✦ Disaster Recovery & HA</li>
+                <li class="grid-item">✦ Cloud Repatriation Strategies</li>
+                <li class="grid-item">✦ AI Infrastructure Architecture</li>
+            </ul>
         </div>
 
         <span class="prompt">denis@infra:~$</span><span class="command">cat enterprise_projects.db</span>
@@ -457,7 +477,7 @@
 
         <span class="prompt">denis@infra:~$</span><span class="cursor"></span>
     </div>
-</div>
+</main>
 
 </body>
 </html>
