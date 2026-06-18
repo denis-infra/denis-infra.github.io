@@ -15,6 +15,8 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@graph": [
+      {
       "@type": "Person",
       "@id": "https://denis-infra.github.io/#person",
       "name": "Денис Ляшенко",
@@ -261,15 +263,6 @@
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "Sun Certified Network Administrator for Solaris 10 OS (Exam)",
-          "credentialCategory": "Certification",
-          "recognizedBy": {
-            "@type": "Organization",
-            "name": "Oracle"
-          }
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
           "name": "Sun Certified System Administrator for Solaris 10 OS (Exam)",
           "credentialCategory": "Certification",
           "recognizedBy": {
@@ -278,8 +271,117 @@
           }
         }
       ]
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Person",
+        "@id": "https://denis-infra.github.io/#person"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Я работал с Денисом с июля 2007 по сентябрь 2013 года в роли его непосредственного руководителя — возглавлял департамент технической поддержки и инфраструктурных решений. За эти шесть лет мы реализовали ряд крупных проектов enterprise-масштаба для ведущих организаций Казахстана: АО «Евразийский Банк», АО «ГНПФ» и АО «KEGOC». Во всех этих проектах Денис проектировал и внедрял критическую инфраструктуру с нуля — кластерные решения Sun Cluster, SAN-фабрики на базе Brocade с СХД корпоративного класса, системы резервного копирования Veritas NetBackup в интеграции с ленточными библиотеками Sun SL500 и Oracle RMAN, серверные платформы Solaris для высоконагруженных OLTP/OLAP-систем на базе Oracle E-Business Suite и Hyperion EPM. Речь шла об инфраструктуре, обслуживающей банковские расчёты по кредитным картам, государственную пенсионную систему и централизованное управление национальной электросетью — среды, где цена ошибки исключительно высока. Дениса всегда отличало системное мышление: способность видеть всю архитектуру целиком, принимать взвешенные проектные решения и доводить их до результата в условиях высоких требований и жёстких дедлайнов. В стрессовых ситуациях он был именно тем человеком, на которого можно положиться. Рекомендую Дениса без оговорок как архитектора инфраструктуры и консультанта — особенно для проектов, где требуется зрелая экспертиза и высокая личная ответственность.",
+      "author": {
+        "@type": "Person",
+        "name": "Boris Berkovich",
+        "jobTitle": "Oracle Apps DBA",
+        "sameAs": "https://www.linkedin.com/in/boris-berkovich-9802157"
+      }
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Person",
+        "@id": "https://denis-infra.github.io/#person"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Денис - эксперт в области построения высокодоступных систем на базе Solaris и Oracle. В ходе совместной работы он показал себя как уникальный специалист, способный закрывать сложнейшие задачи на стыке системного администрирования, сетевых технологий и СУБД. Его профессионализм и системный подход будут полезны в любой технологической команде. Искренне рекомендую его как отличного системного архитектора и администратора.",
+      "author": {
+        "@type": "Person",
+        "name": "Elizaveta Dorofeeva",
+        "jobTitle": "Руководитель департамента ТП и ИР",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "BDO Digital Qazaqstan LLP"
+        },
+        "sameAs": "https://www.linkedin.com/in/elizaveta-dorofeeva-48425791"
+      }
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Person",
+        "@id": "https://denis-infra.github.io/#person"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "С Денисом мы работали в команде по инсталляции решений систем хранения данных для крупных банков Казахстана. Как эксперта в области SAN я хочу подметить его нестандартные решения проблем для заказчиков что позволило сэкономить их деньги и улучшить инфраструктуру. Так же его знания подтверждаются благодарностью заказчиков и сертификатами вендоров таких как IBM, EMC и Oracle. Надеюсь что твоя экспертиза и опыт будут полезными для потенциального клиента.",
+      "author": {
+        "@type": "Person",
+        "name": "Yalkun Mametsupiyev",
+        "jobTitle": "Cloud Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "EPAM Systems"
+        },
+        "sameAs": "https://www.linkedin.com/in/yalkun-mametsupiyev-08888867"
+      }
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Person",
+        "@id": "https://denis-infra.github.io/#person"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Денис проявил себя как отличного ментора когда я попал в Транспортный Холдинг, в сжатые сроки он ввел меня в курс дела на этапе внедрения электронной оплаты проезда «Онай». Я горжусь тем что мы стали первопроходцами в этом нелегком поприще, к тому же на время карьеры в этой компании я познакомился с продуктами Oracle благодаря тебе. Твои решения принесли пользу Холдингу и после твоего ухода мы продолжали пользоваться твоими супер скриптами для оптимизации рутинных административных задач.",
+      "author": {
+        "@type": "Person",
+        "name": "Yalkun Mametsupiyev",
+        "jobTitle": "Cloud Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "EPAM Systems"
+        },
+        "sameAs": "https://www.linkedin.com/in/yalkun-mametsupiyev-08888867"
+      }
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Person",
+        "@id": "https://denis-infra.github.io/#person"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Я знаю Дениса как ответственного и сильного специалиста, на которого всегда можно положиться. Денис демонстрирует высокий уровень профессионализма, умеет находить решения в сложных задачах и доводит работу до результата.",
+      "author": {
+        "@type": "Person",
+        "name": "Игорь Волнухин, PMP",
+        "jobTitle": "Project Manager, Ментор и консультант по проектам",
+        "sameAs": "https://www.linkedin.com/in/igorvolnukhin"
+      }
     }
-    </script>
+  ]
+}
+</script>
 
     <style>
         :root {
