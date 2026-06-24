@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>denis@infra:~#</title>
     <meta name="description" content="Денис Ляшенко: Инженер-архитектор (Hands-on Architect) в области корпоративных систем хранения данных и катастрофоустойчивости (Disaster Recovery) со стажем более 20 лет. Прошёл полный путь от полевого инженера внедрения и эксплуатации до проектировщика сложных инфраструктурных решений для Mission-Critical систем.">
-    <meta property="og:title" content="denis@infrastructure-core:~">
+    <meta property="og:title" content="denis@infra:~#">
     <meta property="og:description" content="Денис Ляшенко: Инженер-архитектор (Hands-on Architect) в области корпоративных систем хранения данных и катастрофоустойчивости (Disaster Recovery) со стажем более 20 лет. Прошёл полный путь от полевого инженера внедрения и эксплуатации до проектировщика сложных инфраструктурных решений для Mission-Critical систем.">
     <meta property="og:image" content="https://denis-infra.github.io/preview.png">
     <meta property="og:type" content="website">
@@ -24,7 +24,12 @@
       "givenName": "Денис",
       "familyName": "Ляшенко",
       "email": "mailto:denis.it.archive@gmail.com",
-      "image": "https://denis-infra.github.io/images/denis-lyashenko-profile.jpg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://denis-infra.github.io/images/denis-lyashenko-profile.jpg",
+        "width": 600,
+        "height": 800
+      },
       "alternateName": [
         "Denis Lyashenko",
         "d.lyashenko",
@@ -170,14 +175,14 @@
           "@type": "EducationalOccupationalCredential",
           "name": "Data Domain Specialist (EMCDDS)",
           "credentialCategory": "Certification",
-          "dateCreated": "2015-05",
+          "dateCreated": "2015-05-19",
           "recognizedBy": { "@type": "Organization", "name": "Dell Technologies" }
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Information Storage Associate (EMCISA)",
           "credentialCategory": "Certification",
-          "dateCreated": "2015-05",
+          "dateCreated": "2015-05-13",
           "recognizedBy": { "@type": "Organization", "name": "Dell Technologies" }
         },
         {
@@ -254,12 +259,14 @@
           "@type": "EducationalOccupationalCredential",
           "name": "Sun Certified Network Administrator for Solaris 10 OS (Exam)",
           "credentialCategory": "Certification",
+          "dateCreated": "2008-04",
           "recognizedBy": { "@type": "Organization", "name": "Oracle" }
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Sun Certified System Administrator for Solaris 10 OS (Exam)",
           "credentialCategory": "Certification",
+          "dateCreated": "2008-03",
           "recognizedBy": { "@type": "Organization", "name": "Oracle" }
         },
         {
@@ -335,6 +342,131 @@
         .window-title {
             color: #565f89;
             font-size: 0.85em;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: auto;
+            border: 1px solid #292e42;
+        }
+
+        .trigger-line {
+            margin-bottom: 15px;
+        }
+
+        .timeline-line {
+            color: var(--text-main);
+        }
+
+        .accent-orange { color: var(--accent-orange); }
+        .timeline-line .accent-orange { color: var(--accent-orange); }
+
+        .cred-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cred-list li {
+            margin-bottom: 4px;
+        }
+
+        .cred-list .year { color: var(--accent-orange); }
+        .cred-list .vendor { color: #565f89; }
+
+        .avatar {
+            cursor: pointer;
+        }
+
+        .reveal-trigger {
+            cursor: pointer;
+            color: #565f89;
+            font-size: 0.85em;
+            font-style: italic;
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        .reveal-trigger:hover {
+            color: var(--accent-cyan);
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(5, 6, 12, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-window {
+            background: var(--terminal-bg);
+            border: 1px solid #292e42;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            max-width: 640px;
+            width: 100%;
+            max-height: 82vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .modal-window.modal-photo-window {
+            max-width: 420px;
+        }
+
+        .modal-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            background: var(--bar-bg);
+            border-bottom: 1px solid #292e42;
+            flex-shrink: 0;
+        }
+
+        .modal-bar .window-title {
+            margin-left: 10px;
+        }
+
+        .modal-close {
+            margin-left: auto;
+            cursor: pointer;
+            color: #c0caf5;
+            font-size: 1.1em;
+            line-height: 1;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .modal-close:hover {
+            background: #f7768e;
+            color: #1a1b26;
+        }
+
+        .modal-body {
+            padding: 18px 20px;
+            overflow-y: auto;
+        }
+
+        .modal-body img {
+            display: block;
+            width: 100%;
+            border-radius: 4px;
         }
 
         .terminal-body {
@@ -437,7 +569,8 @@
             <div class="dot dot-yellow"></div>
             <div class="dot dot-green"></div>
         </div>
-        <div class="window-title">denis@infrastructure-core:~</div>
+        <div class="window-title">denis@infra:~#</div>
+        <img class="avatar" src="/images/denis-lyashenko-profile.jpg" alt="Денис Ляшенко" onclick="openModal('modal-photo')">
     </div>
     
     <div class="terminal-body">
@@ -445,7 +578,7 @@
         <div class="output">
             <h1 class="output-highlight">Denis Lyashenko (Денис Ляшенко)</h1><br>
             Storage & Disaster Recovery Architect | Hands-on Engineer<br>
-            <span class="comment">Стаж в индустрии c 2002 года</span>
+            <span class="comment">LOC: Almaty, KZ | Стаж в индустрии c 2002 года</span>
         </div>
 
         <span class="prompt">denis@infra:~$</span><span class="command">cat about_mission.log</span>
@@ -457,31 +590,217 @@
         <div class="output">
             » YouTube: <a href="https://www.youtube.com/@Storage_DR_Architect" target="_blank" rel="noopener noreferrer">Инженерный взгляд</a><br>
             » LinkedIn: <a href="https://www.linkedin.com/in/denislyashenko" target="_blank" rel="noopener noreferrer">Denis Lyashenko</a><br>
-            » GitHub: <a href="https://github.com/denis-infra" target="_blank" rel="noopener noreferrer">denis-infra</a><br>
-            » Telegram: <a href="https://t.me/DenisITLife_bot" target="_blank" rel="noopener noreferrer">DenisITLife</a>
+            » Telegram: <a href="https://t.me/DenisITLife_bot" target="_blank" rel="noopener noreferrer">DenisITLife</a><br>
+            » ORCID: <a href="https://orcid.org/0009-0006-1469-4607" target="_blank" rel="noopener noreferrer">0009-0006-1469-4607</a><br>
+            » GitHub: <a href="https://github.com/denis-infra" target="_blank" rel="noopener noreferrer">denis-infra</a>
         </div>
 
-        <span class="prompt">denis@infra:~$</span><span class="command">show --core-skills</span>
+        <div class="trigger-line">
+            <span class="prompt">denis@infra:~$</span><span class="command">show --core-skills</span>
+            <button type="button" class="reveal-trigger" onclick="openModal('modal-skills')">[нажми, чтобы развернуть]</button>
+        </div>
         <div class="output">
             <ul class="grid-list">
+                <li class="grid-item">✦ Storage Area Networks (SAN)</li>
                 <li class="grid-item">✦ Technical Architecture</li>
                 <li class="grid-item">✦ Enterprise Storage Systems</li>
                 <li class="grid-item">✦ High Availability</li>
                 <li class="grid-item">✦ Disaster Recovery</li>
                 <li class="grid-item">✦ Cloud Repatriation</li>
-                <li class="grid-item">✦ AI Infrastructure</li>
             </ul>
         </div>
 
-        <span class="prompt">denis@infra:~$</span><span class="command">cat enterprise_projects.db</span>
+        <div class="trigger-line">
+            <span class="prompt">denis@infra:~$</span><span class="command">cat enterprise_projects.db</span>
+            <button type="button" class="reveal-trigger" onclick="openModal('modal-projects')">[нажми, чтобы развернуть]</button>
+        </div>
         <div class="output">
             <span class="comment"># Успешно реализованные проекты и infrastructure-аудит:</span><br>
             АО «Kaspi Bank», АО «ЦеснаБанк», АО «Нурбанк», АО «Альфа-Банк», АО «Евразийский Банк», АО «ГНПФ», АО «KEGOC», ТОО «Транспортный холдинг города Алматы».
         </div>
 
+        <div class="trigger-line">
+            <span class="prompt">denis@infra:~$</span><span class="command">history --jobs</span>
+            <button type="button" class="reveal-trigger" onclick="openModal('modal-jobs')">[нажми, чтобы развернуть]</button>
+        </div>
+
+        <div class="trigger-line">
+            <span class="prompt">denis@infra:~$</span><span class="command">show --credentials</span>
+            <button type="button" class="reveal-trigger" onclick="openModal('modal-credentials')">[нажми, чтобы развернуть]</button>
+        </div>
+
         <span class="prompt">denis@infra:~$</span><span class="cursor"></span>
     </div>
 </main>
+
+<div class="modal-overlay" id="modal-photo">
+    <div class="modal-window modal-photo-window">
+        <div class="modal-bar">
+            <div class="window-buttons">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div class="window-title">photo.jpg</div>
+            <span class="modal-close" onclick="closeModal('modal-photo')">×</span>
+        </div>
+        <div class="modal-body">
+            <img src="/images/denis-lyashenko-profile.jpg" alt="Денис Ляшенко">
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-skills">
+    <div class="modal-window">
+        <div class="modal-bar">
+            <div class="window-buttons">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div class="window-title">show --core-skills --all</div>
+            <span class="modal-close" onclick="closeModal('modal-skills')">×</span>
+        </div>
+        <div class="modal-body">
+            <ul class="grid-list">
+                <li class="grid-item">✦ Storage Area Networks (SAN)</li>
+                <li class="grid-item">✦ Fibre Channel</li>
+                <li class="grid-item">✦ Enterprise Storage Systems</li>
+                <li class="grid-item">✦ EMC Storage Systems</li>
+                <li class="grid-item">✦ Data Storage Technologies</li>
+                <li class="grid-item">✦ Backup and Recovery Solutions</li>
+                <li class="grid-item">✦ Data Protection</li>
+                <li class="grid-item">✦ Converged Infrastructure</li>
+                <li class="grid-item">✦ Disaster Recovery</li>
+                <li class="grid-item">✦ High Availability</li>
+                <li class="grid-item">✦ Technical Architecture</li>
+                <li class="grid-item">✦ IT Infrastructure Management</li>
+                <li class="grid-item">✦ Data Center Infrastructure</li>
+                <li class="grid-item">✦ Performance Tuning</li>
+                <li class="grid-item">✦ Unix</li>
+                <li class="grid-item">✦ Solaris</li>
+                <li class="grid-item">✦ Oracle Solaris System Administration</li>
+                <li class="grid-item">✦ Sun Cluster</li>
+                <li class="grid-item">✦ System Administration</li>
+                <li class="grid-item">✦ Database Administration</li>
+                <li class="grid-item">✦ TCP/IP</li>
+                <li class="grid-item">✦ Network Infrastructure</li>
+                <li class="grid-item">✦ SPARC</li>
+                <li class="grid-item">✦ AI Infrastructure</li>
+                <li class="grid-item">✦ Cloud Repatriation</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-jobs">
+    <div class="modal-window">
+        <div class="modal-bar">
+            <div class="window-buttons">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div class="window-title">history --jobs --all</div>
+            <span class="modal-close" onclick="closeModal('modal-jobs')">×</span>
+        </div>
+        <div class="modal-body">
+            <div class="timeline-line"><span class="accent-orange">2017 — наст. время</span> :: Independent Consultant — Storage & Disaster Recovery Architect</div>
+            <div class="timeline-line"><span class="accent-orange">2015–2017</span> :: ТОО «Транспортный холдинг города Алматы» — Senior IT Infrastructure Administrator</div>
+            <div class="timeline-line"><span class="accent-orange">2013–2015</span> :: Competent IT — Senior Enterprise Storage Infrastructure Engineer</div>
+            <div class="timeline-line"><span class="accent-orange">2007–2013</span> :: Eltal-Borlas Consulting — Senior Infrastructure Consultant (Sun/Oracle Solutions)</div>
+            <div class="timeline-line"><span class="accent-orange">2002–2007</span> :: Nursat — Network Infrastructure Support Engineer</div>
+            <br>
+            <div class="timeline-line">2000–2003 :: Алматинская Академия Экономики и Статистики — Bachelor's degree, IT Management</div>
+            <div class="timeline-line">1998–2000 :: Центральноазиатский технико-экономический колледж — Associate's degree, Systems Engineering</div>
+            <div class="timeline-line">1996–1998 :: Almaty College of Civil Aviation Service — Technical Diploma, Radio Communications</div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-credentials">
+    <div class="modal-window">
+        <div class="modal-bar">
+            <div class="window-buttons">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div class="window-title">show --credentials --all</div>
+            <span class="modal-close" onclick="closeModal('modal-credentials')">×</span>
+        </div>
+        <div class="modal-body">
+            <ul class="cred-list">
+                <li><span class="year">2015</span> Data Domain Specialist (EMCDDS) <span class="vendor">— Dell Technologies</span></li>
+                <li><span class="year">2015</span> Information Storage Associate (EMCISA) <span class="vendor">— Dell Technologies</span></li>
+                <li><span class="year">2014</span> HP B-Series Switch Administration & Fabric Professional <span class="vendor">— HPE</span></li>
+                <li><span class="year">2014</span> IBM PureFlex System Fundamentals <span class="vendor">— IBM</span></li>
+                <li><span class="year">2014</span> EMC NetWorker Installation, Configure & Administration <span class="vendor">— Dell Technologies</span></li>
+                <li><span class="year">2009</span> Sun Certified System Administrator for Sun Cluster 3.2 <span class="vendor">— Oracle</span></li>
+                <li><span class="year">2009</span> Sun Cluster 3.2 Administration Training <span class="vendor">— Oracle</span></li>
+                <li><span class="year">2009</span> TDC-006 Storage Mid-Level Accreditation <span class="vendor">— Oracle</span></li>
+                <li><span class="year">2009</span> TDC-008 Mx000 Series Hardware Training <span class="vendor">— Oracle</span></li>
+                <li><span class="year">2008</span> TDC-004 Entry Level Storage Accreditation <span class="vendor">— Oracle</span></li>
+                <li><span class="year">2008</span> TDC-001 Entry Level SPARC Accreditation <span class="vendor">— Oracle</span></li>
+                <li><span class="year">2008</span> TDC-003 Mid Level SPARC Accreditation <span class="vendor">— Oracle</span></li>
+                <li><span class="year">2008</span> Sun Certified Network Administrator for Solaris 10 OS <span class="vendor">— Oracle</span></li>
+                <li><span class="year">2008</span> Sun Certified System Administrator for Solaris 10 OS <span class="vendor">— Oracle</span></li>
+                <li><span class="year">2007</span> System Administration for the Solaris 10 OS Training <span class="vendor">— Oracle</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-projects">
+    <div class="modal-window">
+        <div class="modal-bar">
+            <div class="window-buttons">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div class="window-title">cat enterprise_projects.db --full</div>
+            <span class="modal-close" onclick="closeModal('modal-projects')">×</span>
+        </div>
+        <div class="modal-body">
+            <p><span class="accent-orange">2017 — наст. время :: Independent Consultant</span><br>
+            Независимый аудит и проектирование корпоративных СХД и SAN-сетей. Анализ катастрофоустойчивости и оптимизация архитектурных решений для Mission-Critical систем.</p>
+
+            <p><span class="accent-orange">2015–2017 :: ТОО «Транспортный холдинг города Алматы»</span><br>
+            Развёртывание, обеспечение отказоустойчивости и комплексный технический тюнинг высоконагруженной инфраструктуры для первой в Казахстане системы электронного билетирования (проект «Онай», 1М+ транзакций в сутки). Обеспечение бесперебойной работы платёжного процессинга ЦФТ «Золотая Корона» через тонкую настройку производительности СУБД Oracle и серверов приложений WildFly (JBoss). Защита критически важных данных проекта посредством настройки и сопровождения схем асинхронной репликации.</p>
+
+            <p><span class="accent-orange">2013–2015 :: Competent IT</span><br>
+            Снижение рисков отказа критически важных банковских систем (АО «Цесна Банк», АО «Kaspi Bank») за счёт аудита и оптимизации логики SAN-сетей. Внедрение и архитектурный надзор систем хранения корпоративного класса (EMC VNX/VMAX, IBM Storwize) и систем резервного копирования (Data Domain). Проведение анализа производительности SAN-сетей для финансового сектора (АО «Нурбанк», АО «Альфа-Банк») с устранением узких мест (bottlenecks), что обеспечило бесперебойную работу транзакционных ядер.</p>
+
+            <p><span class="accent-orange">2007–2013 :: Eltal-Borlas Consulting</span><br>
+            Проектирование и развёртывание высокодоступных (High Availability) кластерных архитектур для Enterprise-сектора (АО «Евразийский Банк», АО «ГНПФ», АО «KEGOC»). Обеспечение надёжности данных через внедрение Sun Cluster и разработку стратегий резервного копирования (Veritas NetBackup). Глубокий траблшутинг и настройка ОС Solaris под высоконагруженные базы данных Oracle. Построение с нуля и обслуживание отказоустойчивых SAN-сетей на базе Brocade, что гарантировало непрерывность бизнес-процессов на уровне Enterprise.</p>
+
+            <p><span class="accent-orange">2002–2007 :: Nursat</span><br>
+            Обеспечение бесперебойной работы опорной корпоративной сети передачи данных. Траблшутинг инцидентов на сетевом оборудовании.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).classList.add('active');
+    }
+    function closeModal(id) {
+        document.getElementById(id).classList.remove('active');
+    }
+    document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
+        overlay.addEventListener('click', function (e) {
+            if (e.target === overlay) overlay.classList.remove('active');
+        });
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.active').forEach(function (o) {
+                o.classList.remove('active');
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
