@@ -337,7 +337,8 @@
         "@id": "https://doi.org/10.5281/zenodo.23303372"
       },
       "creativeWorkStatus": "Preprint",
-      "license": "https://creativecommons.org/licenses/by/4.0/"
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "headline": "Deterministic Lower Bound of Fibre Channel Fabric Latency: A Reproducible Calculation Methodology from Datasheet Parameters for 32/64/128GFC (Gen 6/7/8)"
     },
     {
       "@type": "SoftwareSourceCode",
@@ -751,22 +752,14 @@
             <button type="button" class="reveal-trigger" aria-haspopup="dialog" aria-controls="modal-credentials" onclick="openModal('modal-credentials')">[Все сертификаты]</button>
         </div>
 
-        <section class="publications output" aria-labelledby="publications-heading">
-            <h2 id="publications-heading">Публикации и код</h2>
-            <ul>
-                <li>
-                    <h3><a href="https://doi.org/10.2139/ssrn.7599458" lang="en">Deterministic Lower Bound of Fibre Channel Fabric Latency: A Reproducible Calculation Methodology from Datasheet Parameters for 32/64/128GFC (Gen 6/7/8)</a></h3>
-                    <p>Denis Lyashenko · Препринт, SSRN · <time datetime="2026-10-12">12.10.2026</time> · CC BY 4.0</p>
-                    <p class="comment">DOI: 10.2139/ssrn.7599458</p>
-                </li>
-                <li>
-                    <h3><a href="https://doi.org/10.5281/zenodo.23303372" lang="en">Fibre Channel Fabric Latency Lower Bounds Computational Package</a></h3>
-                    <p>Denis Lyashenko · Код, Zenodo · <time datetime="2026-10-12">12.10.2026</time> · v1.0.0 · Python · MIT</p>
-                    <p>Расчётный пакет для воспроизведения численных результатов препринта.</p>
-                    <p class="comment">DOI: 10.5281/zenodo.23303372</p>
-                </li>
-            </ul>
-        </section>
+        <div class="trigger-line">
+            <span class="prompt">denis@infra:~$</span><span class="command">cat publications.md</span>
+            <button type="button" class="reveal-trigger" aria-haspopup="dialog" aria-controls="modal-publications" onclick="openModal('modal-publications')">[Публикации и код]</button>
+        </div>
+        <div class="output">
+            » Препринт: <a href="https://doi.org/10.2139/ssrn.7599458">Методика расчёта задержки Fibre Channel</a><br>
+            » Код: <a href="https://doi.org/10.5281/zenodo.23303372">Расчётный пакет Python, v1.0.0</a>
+        </div>
 
         <span class="prompt">denis@infra:~$</span><span class="cursor" aria-hidden="true"></span>
     </div>
@@ -780,7 +773,7 @@
                 <div class="dot dot-yellow"></div>
                 <div class="dot dot-green"></div>
             </div>
-            <div class="window-title" id="modal-photo-title" tabindex="-1">photo.jpg</div>
+            <div class="window-title" id="modal-photo-title" tabindex="-1">denis-lyashenko-profile.jpg</div>
             <button type="button" class="modal-close" aria-label="Закрыть окно" onclick="closeModal('modal-photo')">×</button>
         </div>
         <div class="modal-body" tabindex="0">
@@ -917,6 +910,38 @@
 
             <p><span class="accent-orange">2002–2007 :: Nursat</span><br>
             Обеспечение бесперебойной работы опорной корпоративной сети передачи данных. Траблшутинг инцидентов на сетевом оборудовании.</p>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="modal-overlay" id="modal-publications" aria-labelledby="modal-publications-title">
+    <div class="modal-window">
+        <div class="modal-bar">
+            <div class="window-buttons" aria-hidden="true">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div class="window-title" id="modal-publications-title" tabindex="-1">cat publications.md --full</div>
+            <button type="button" class="modal-close" aria-label="Закрыть окно" onclick="closeModal('modal-publications')">×</button>
+        </div>
+        <div class="modal-body" tabindex="0">
+        <section class="publications" aria-labelledby="publications-heading">
+            <h2 id="publications-heading">Публикации и код</h2>
+            <ul>
+                <li>
+                    <h3><a href="https://doi.org/10.2139/ssrn.7599458" lang="en">Deterministic Lower Bound of Fibre Channel Fabric Latency: A Reproducible Calculation Methodology from Datasheet Parameters for 32/64/128GFC (Gen 6/7/8)</a></h3>
+                    <p>Denis Lyashenko · Препринт, SSRN · <time datetime="2026-10-12">12.10.2026</time> · CC BY 4.0</p>
+                    <p class="comment">DOI: 10.2139/ssrn.7599458</p>
+                </li>
+                <li>
+                    <h3><a href="https://doi.org/10.5281/zenodo.23303372" lang="en">Fibre Channel Fabric Latency Lower Bounds Computational Package</a></h3>
+                    <p>Denis Lyashenko · Код, Zenodo · <time datetime="2026-10-12">12.10.2026</time> · v1.0.0 · Python · MIT</p>
+                    <p>Расчётный пакет для воспроизведения численных результатов препринта.</p>
+                    <p class="comment">DOI: 10.5281/zenodo.23303372</p>
+                </li>
+            </ul>
+        </section>
         </div>
     </div>
 </dialog>
