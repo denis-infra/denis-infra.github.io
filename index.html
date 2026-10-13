@@ -938,6 +938,20 @@
 
     document.querySelectorAll('.modal-overlay').forEach(function (dialog) {
         let startedOnBackdrop = false;
+        dialog.addEventListener('keydown', function (event) {
+            if (event.key !== 'Tab') return;
+            const focusable = Array.from(dialog.querySelectorAll('button, a[href], [tabindex]'))
+                .filter(function (element) { return element.tabIndex >= 0 && !element.disabled && element.getClientRects().length; });
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (event.shiftKey && (document.activeElement === first || document.activeElement.tabIndex < 0)) {
+                event.preventDefault();
+                last.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+                event.preventDefault();
+                first.focus();
+            }
+        });
         dialog.addEventListener('pointerdown', function (event) {
             startedOnBackdrop = event.target === dialog;
         });
