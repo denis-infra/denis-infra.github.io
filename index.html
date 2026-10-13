@@ -30,7 +30,15 @@
       },
       "mainEntity": {
         "@id": "https://denis-infra.github.io/#person"
-      }
+      },
+      "mentions": [
+        {
+          "@id": "https://doi.org/10.2139/ssrn.7599458"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.23303372"
+        }
+      ]
     },
     {
       "@type": "Person",
@@ -61,23 +69,12 @@
         "https://www.youtube.com/channel/UCxpMMBHxJk8d-fRgAKEJH1A",
         "https://www.youtube.com/@Storage_DR_Architect"
       ],
-        "hasOccupation": {
+      "hasOccupation": {
         "@type": "Occupation",
         "name": "Storage & Disaster Recovery Architect",
         "description": "Независимый аудит и проектирование корпоративных СХД и SAN-сетей. Анализ катастрофоустойчивости и оптимизация архитектурных решений для Mission-Critical систем."
       },
-
       "worksFor": [
-        {
-          "@type": "EmployeeRole",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "Independent Consultant"
-          },
-          "roleName": "Storage & Disaster Recovery Architect",
-          "startDate": "2017-11",
-          "description": "Независимый аудит и проектирование корпоративных СХД и SAN-сетей. Анализ катастрофоустойчивости и оптимизация архитектурных решений для Mission-Critical систем."
-        },
         {
           "@type": "EmployeeRole",
           "worksFor": {
@@ -125,40 +122,20 @@
           "description": "Обеспечение бесперебойной работы опорной корпоративной сети передачи данных. Траблшутинг инцидентов на сетевом оборудовании."
         }
       ],
-
       "alumniOf": [
         {
-          "@type": "OrganizationRole",
-          "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Алматинская Академия Экономики и Статистики"
-          },
-          "roleName": "Bachelor's degree, Information Technology Management",
-          "startDate": "2000",
-          "endDate": "2003"
+          "@type": "EducationalOrganization",
+          "name": "Алматинская Академия Экономики и Статистики"
         },
         {
-          "@type": "OrganizationRole",
-          "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Центральноазиатский технико-экономический колледж"
-          },
-          "roleName": "Associate's degree, Systems Engineering / Automated Control Systems",
-          "startDate": "1998",
-          "endDate": "2000"
+          "@type": "EducationalOrganization",
+          "name": "Центральноазиатский технико-экономический колледж"
         },
         {
-          "@type": "OrganizationRole",
-          "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Almaty College of Civil Aviation Service"
-          },
-          "roleName": "Technical Diploma, Radio Communications",
-          "startDate": "1996",
-          "endDate": "1998"
+          "@type": "EducationalOrganization",
+          "name": "Almaty College of Civil Aviation Service"
         }
       ],
-
       "knowsAbout": [
         "Storage Area Networks (SAN)",
         "Fibre Channel",
@@ -186,114 +163,200 @@
         "AI Infrastructure",
         "Cloud Repatriation"
       ],
-
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Data Domain Specialist (EMCDDS)",
           "credentialCategory": "Certification",
           "dateCreated": "2015-05-19",
-          "recognizedBy": { "@type": "Organization", "name": "Dell Technologies" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Dell Technologies"
+          }
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Information Storage Associate (EMCISA)",
           "credentialCategory": "Certification",
           "dateCreated": "2015-05-13",
-          "recognizedBy": { "@type": "Organization", "name": "Dell Technologies" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Dell Technologies"
+          }
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "HP B-Series Switch Administration & Fabric Professional Training",
           "credentialCategory": "Certification",
-          "dateCreated": "2014-12",
-          "recognizedBy": { "@type": "Organization", "name": "Hewlett Packard Enterprise" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Hewlett Packard Enterprise"
+          },
+          "description": "Сертификат HP Education Services об обучении по курсам HK910S/HK911S. Период обучения: 15–19 декабря 2014 года."
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "IBM PureFlex System Fundamentals Training",
           "credentialCategory": "Certification",
-          "dateCreated": "2014-05",
-          "recognizedBy": { "@type": "Organization", "name": "IBM" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "IBM"
+          },
+          "description": "Сертификат об успешном прохождении курса IBM PureFlex System Fundamentals, 19–21 мая 2014 года."
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "EMC NetWorker Installation, Configure & Administration Training",
           "credentialCategory": "Certification",
-          "dateCreated": "2014-02",
-          "recognizedBy": { "@type": "Organization", "name": "Dell Technologies" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Dell Technologies"
+          },
+          "description": "Свидетельство учебного центра «Микроинформ» об окончании курса EMC NetWorker Installation, Configuration & Administration. Дата получения: 14 февраля 2014 года."
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Sun Certified System Administrator for Sun Cluster 3.2 (Exam)",
           "credentialCategory": "Certification",
           "dateCreated": "2009-06",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          }
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Sun Cluster 3.2 Administration Training",
           "credentialCategory": "Certification",
-          "dateCreated": "2009-06",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          },
+          "description": "Сертификат Sun Microsystems о прохождении курса VC-ES-345. Период обучения: 29 июня — 4 июля 2009 года."
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "TDC-006 Storage Mid-Level Accreditation & Required Exam",
           "credentialCategory": "Certification",
-          "dateCreated": "2009-05",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          },
+          "description": "Обучение и обязательный экзамен по Storage Mid-Level Accreditation. Период программы: 11–15 мая 2009 года."
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "TDC-008 Mx000 Series Hardware Training & Required Exam",
           "credentialCategory": "Certification",
-          "dateCreated": "2009-05",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          },
+          "description": "Обучение и обязательный экзамен по Mx000 Series Hardware Training. Период программы: 4–8 мая 2009 года."
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "TDC-004 Entry Level Storage Accreditation, Required Exam & Labs",
           "credentialCategory": "Certification",
-          "dateCreated": "2008-07",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          },
+          "description": "Обучение, обязательный экзамен и лабораторные работы по Entry Level Storage Accreditation. Период программы: 30 июня — 11 июля 2008 года."
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "TDC-001 Entry Level SPARC Accreditation & Required Exam",
           "credentialCategory": "Certification",
-          "dateCreated": "2008-06",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          },
+          "description": "Обучение и обязательный экзамен по Entry Level SPARC Accreditation. Период программы: 16–20 июня 2008 года."
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "TDC-003 Mid Level SPARC Accreditation & Required Exam",
           "credentialCategory": "Certification",
-          "dateCreated": "2008-06",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          },
+          "description": "Обучение и обязательный экзамен по Mid Level SPARC Accreditation. Период программы: 23–27 июня 2008 года."
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Sun Certified Network Administrator for Solaris 10 OS (Exam)",
           "credentialCategory": "Certification",
           "dateCreated": "2008-04",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          }
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Sun Certified System Administrator for Solaris 10 OS (Exam)",
           "credentialCategory": "Certification",
           "dateCreated": "2008-03",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          }
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "System Administration for the Solaris 10 Operating System Training",
           "credentialCategory": "Certification",
-          "dateCreated": "2007-11",
-          "recognizedBy": { "@type": "Organization", "name": "Oracle" }
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Oracle"
+          },
+          "description": "Сертификат Sun Microsystems о прохождении курса SA-200-S10. Период обучения: 5–9 ноября 2007 года."
         }
       ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.2139/ssrn.7599458",
+      "name": "Deterministic Lower Bound of Fibre Channel Fabric Latency: A Reproducible Calculation Methodology from Datasheet Parameters for 32/64/128GFC (Gen 6/7/8)",
+      "url": "https://doi.org/10.2139/ssrn.7599458",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.2139/ssrn.7599458"
+      },
+      "author": {
+        "@id": "https://denis-infra.github.io/#person"
+      },
+      "datePublished": "2026-10-12",
+      "citation": {
+        "@id": "https://doi.org/10.5281/zenodo.23303372"
+      },
+      "creativeWorkStatus": "Preprint",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://doi.org/10.5281/zenodo.23303372",
+      "name": "Fibre Channel Fabric Latency Lower Bounds Computational Package",
+      "url": "https://doi.org/10.5281/zenodo.23303372",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.23303372"
+      },
+      "author": {
+        "@id": "https://denis-infra.github.io/#person"
+      },
+      "datePublished": "2026-10-12",
+      "citation": {
+        "@id": "https://doi.org/10.2139/ssrn.7599458"
+      },
+      "version": "1.0.0",
+      "programmingLanguage": "Python",
+      "license": "https://opensource.org/licenses/MIT",
+      "isAccessibleForFree": true
     }
   ]
 }
@@ -304,6 +367,7 @@
             --bg-color: #0f111a;
             --terminal-bg: #1a1b26;
             --text-main: #a9b1d6;
+            --text-muted: #9aa5ce;
             --accent-cyan: #70ffff;
             --accent-green: #73daca;
             --accent-orange: #ff9e64;
@@ -357,7 +421,7 @@
         .dot-green { background-color: #9ece6a; }
 
         .window-title {
-            color: #565f89;
+            color: var(--text-muted);
             font-size: 0.85em;
         }
 
@@ -366,9 +430,8 @@
             height: 30px;
             border-radius: 50%;
             object-fit: cover;
-            margin-left: auto;
+            display: block;
             border: 1px solid #292e42;
-            cursor: pointer;
         }
 
         .trigger-line {
@@ -380,7 +443,6 @@
         }
 
         .accent-orange { color: var(--accent-orange); }
-        .timeline-line .accent-orange { color: var(--accent-orange); }
 
         .cred-list {
             list-style: none;
@@ -393,11 +455,11 @@
         }
 
         .cred-list .year { color: var(--accent-orange); }
-        .cred-list .vendor { color: #565f89; }
+        .cred-list .vendor { color: var(--text-muted); }
 
         .reveal-trigger {
             cursor: pointer;
-            color: #565f89;
+            color: var(--text-muted);
             font-size: 0.85em;
             font-style: italic;
             background: none;
@@ -416,16 +478,23 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgb(5 6 12 / 80%);
-            z-index: 1000;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+            background: transparent;
+            color: inherit;
             align-items: center;
             justify-content: center;
             padding: 24px;
         }
 
-        .modal-overlay.active {
-            display: flex;
-        }
+        .modal-overlay[open] { display: flex; }
+        .modal-overlay::backdrop { background: rgb(5 6 12 / 80%); }
+        body.modal-open { overflow: hidden; }
 
         .modal-window {
             background: var(--terminal-bg);
@@ -458,6 +527,12 @@
         }
 
         .modal-close {
+            background: none;
+            border: 0;
+            font-family: inherit;
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
             margin-left: auto;
             cursor: pointer;
             color: #c0caf5;
@@ -480,6 +555,7 @@
         .modal-body img {
             display: block;
             width: 100%;
+            height: auto;
             border-radius: 4px;
         }
 
@@ -522,14 +598,14 @@
         }
 
         .comment {
-            color: #565f89;
+            color: var(--text-muted);
             font-style: italic;
         }
 
         /* Сброс стилей для семантического списка */
         ul.grid-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
             gap: 8px;
             margin-top: 10px;
             padding: 0;
@@ -549,7 +625,7 @@
             color: var(--accent-blue);
             text-decoration: none;
             border-bottom: 1px dashed var(--accent-blue);
-            transition: all 0.2s ease;
+            transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
         }
 
         a:hover {
@@ -572,19 +648,48 @@
             0%, 49% { background-color: var(--accent-cyan); }
             50%, 100% { background-color: transparent; }
         }
+
+        .avatar-button {
+            margin-left: auto;
+            padding: 0;
+            background: none;
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--accent-cyan);
+            outline-offset: 3px;
+        }
+
+        .modal-bar .window-title { min-width: 0; }
+        .modal-bar .window-buttons { flex-shrink: 0; }
+        .terminal-body, .modal-body, .modal-bar .window-title {
+            overflow-wrap: anywhere;
+        }
+        .modal-body { min-height: 0; }
+        .publications h2 { font-size: 1em; font-weight: normal; margin: 0 0 10px; color: #fff; }
+        .publications h3 { font-size: 1em; font-weight: normal; margin: 0 0 4px; }
+        .publications ul { list-style: none; padding: 0; margin: 0; }
+        .publications li + li { margin-top: 14px; }
+        .publications p { margin: 0; }
     </style>
 </head>
 <body>
 
 <main class="terminal-window">
     <div class="terminal-bar">
-        <div class="window-buttons">
+        <div class="window-buttons" aria-hidden="true">
             <div class="dot dot-red"></div>
             <div class="dot dot-yellow"></div>
             <div class="dot dot-green"></div>
         </div>
         <div class="window-title">denis@infra:~#</div>
-        <img class="avatar" src="/images/denis-lyashenko-profile.jpg" alt="Денис Ляшенко" onclick="openModal('modal-photo')">
+        <button type="button" class="avatar-button" aria-label="Открыть фотографию Дениса Ляшенко" aria-haspopup="dialog" aria-controls="modal-photo" onclick="openModal('modal-photo')">
+            <img class="avatar" src="/images/denis-lyashenko-profile.jpg" alt="" width="30" height="30">
+        </button>
     </div>
     
     <div class="terminal-body">
@@ -611,7 +716,7 @@
 
         <div class="trigger-line">
             <span class="prompt">denis@infra:~$</span><span class="command">show --core-skills</span>
-            <button type="button" class="reveal-trigger" onclick="openModal('modal-skills')">[нажми, чтобы развернуть]</button>
+            <button type="button" class="reveal-trigger" aria-haspopup="dialog" aria-controls="modal-skills" onclick="openModal('modal-skills')">[Все навыки]</button>
         </div>
         <div class="output">
             <ul class="grid-list">
@@ -626,7 +731,7 @@
 
         <div class="trigger-line">
             <span class="prompt">denis@infra:~$</span><span class="command">cat enterprise_projects.db</span>
-            <button type="button" class="reveal-trigger" onclick="openModal('modal-projects')">[нажми, чтобы развернуть]</button>
+            <button type="button" class="reveal-trigger" aria-haspopup="dialog" aria-controls="modal-projects" onclick="openModal('modal-projects')">[Подробности проектов]</button>
         </div>
         <div class="output">
             <span class="comment"># Успешно реализованные проекты и infrastructure-аудит:</span><br>
@@ -635,47 +740,64 @@
 
         <div class="trigger-line">
             <span class="prompt">denis@infra:~$</span><span class="command">history --jobs</span>
-            <button type="button" class="reveal-trigger" onclick="openModal('modal-jobs')">[нажми, чтобы развернуть]</button>
+            <button type="button" class="reveal-trigger" aria-haspopup="dialog" aria-controls="modal-jobs" onclick="openModal('modal-jobs')">[Опыт работы и образование]</button>
         </div>
 
         <div class="trigger-line">
             <span class="prompt">denis@infra:~$</span><span class="command">show --credentials</span>
-            <button type="button" class="reveal-trigger" onclick="openModal('modal-credentials')">[нажми, чтобы развернуть]</button>
+            <button type="button" class="reveal-trigger" aria-haspopup="dialog" aria-controls="modal-credentials" onclick="openModal('modal-credentials')">[Все сертификаты]</button>
         </div>
 
-        <span class="prompt">denis@infra:~$</span><span class="cursor"></span>
+        <section class="publications output" aria-labelledby="publications-heading">
+            <h2 id="publications-heading">Публикации и код</h2>
+            <ul>
+                <li>
+                    <h3><a href="https://doi.org/10.2139/ssrn.7599458" lang="en">Deterministic Lower Bound of Fibre Channel Fabric Latency: A Reproducible Calculation Methodology from Datasheet Parameters for 32/64/128GFC (Gen 6/7/8)</a></h3>
+                    <p>Denis Lyashenko · Препринт, SSRN · <time datetime="2026-10-12">12.10.2026</time> · CC BY 4.0</p>
+                    <p class="comment">DOI: 10.2139/ssrn.7599458</p>
+                </li>
+                <li>
+                    <h3><a href="https://doi.org/10.5281/zenodo.23303372" lang="en">Fibre Channel Fabric Latency Lower Bounds Computational Package</a></h3>
+                    <p>Denis Lyashenko · Код, Zenodo · <time datetime="2026-10-12">12.10.2026</time> · v1.0.0 · Python · MIT</p>
+                    <p>Расчётный пакет для воспроизведения численных результатов препринта.</p>
+                    <p class="comment">DOI: 10.5281/zenodo.23303372</p>
+                </li>
+            </ul>
+        </section>
+
+        <span class="prompt">denis@infra:~$</span><span class="cursor" aria-hidden="true"></span>
     </div>
 </main>
 
-<div class="modal-overlay" id="modal-photo">
+<dialog class="modal-overlay" id="modal-photo" aria-labelledby="modal-photo-title">
     <div class="modal-window modal-photo-window">
         <div class="modal-bar">
-            <div class="window-buttons">
+            <div class="window-buttons" aria-hidden="true">
                 <div class="dot dot-red"></div>
                 <div class="dot dot-yellow"></div>
                 <div class="dot dot-green"></div>
             </div>
-            <div class="window-title">photo.jpg</div>
-            <span class="modal-close" onclick="closeModal('modal-photo')">×</span>
+            <div class="window-title" id="modal-photo-title" tabindex="-1">photo.jpg</div>
+            <button type="button" class="modal-close" aria-label="Закрыть окно" onclick="closeModal('modal-photo')">×</button>
         </div>
-        <div class="modal-body">
-            <img src="/images/denis-lyashenko-profile.jpg" alt="Денис Ляшенко">
+        <div class="modal-body" tabindex="0">
+            <img src="/images/denis-lyashenko-profile.jpg" alt="Денис Ляшенко" width="600" height="800">
         </div>
     </div>
-</div>
+</dialog>
 
-<div class="modal-overlay" id="modal-skills">
+<dialog class="modal-overlay" id="modal-skills" aria-labelledby="modal-skills-title">
     <div class="modal-window">
         <div class="modal-bar">
-            <div class="window-buttons">
+            <div class="window-buttons" aria-hidden="true">
                 <div class="dot dot-red"></div>
                 <div class="dot dot-yellow"></div>
                 <div class="dot dot-green"></div>
             </div>
-            <div class="window-title">show --core-skills --all</div>
-            <span class="modal-close" onclick="closeModal('modal-skills')">×</span>
+            <div class="window-title" id="modal-skills-title" tabindex="-1">show --core-skills --all</div>
+            <button type="button" class="modal-close" aria-label="Закрыть окно" onclick="closeModal('modal-skills')">×</button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" tabindex="0">
             <ul class="grid-list">
                 <li class="grid-item">✦ Storage Area Networks (SAN)</li>
                 <li class="grid-item">✦ Fibre Channel</li>
@@ -705,20 +827,20 @@
             </ul>
         </div>
     </div>
-</div>
+</dialog>
 
-<div class="modal-overlay" id="modal-jobs">
+<dialog class="modal-overlay" id="modal-jobs" aria-labelledby="modal-jobs-title">
     <div class="modal-window">
         <div class="modal-bar">
-            <div class="window-buttons">
+            <div class="window-buttons" aria-hidden="true">
                 <div class="dot dot-red"></div>
                 <div class="dot dot-yellow"></div>
                 <div class="dot dot-green"></div>
             </div>
-            <div class="window-title">history --jobs --all</div>
-            <span class="modal-close" onclick="closeModal('modal-jobs')">×</span>
+            <div class="window-title" id="modal-jobs-title" tabindex="-1">history --jobs --all</div>
+            <button type="button" class="modal-close" aria-label="Закрыть окно" onclick="closeModal('modal-jobs')">×</button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" tabindex="0">
             <div class="timeline-line"><span class="accent-orange">2017 — наст. время</span> :: Independent Consultant — Storage & Disaster Recovery Architect</div>
             <div class="timeline-line"><span class="accent-orange">2015–2017</span> :: ТОО «Транспортный холдинг города Алматы» — Senior IT Infrastructure Administrator</div>
             <div class="timeline-line"><span class="accent-orange">2013–2015</span> :: Competent IT — Senior Enterprise Storage Infrastructure Engineer</div>
@@ -730,20 +852,21 @@
             <div class="timeline-line">1996–1998 :: Almaty College of Civil Aviation Service — Technical Diploma, Radio Communications</div>
         </div>
     </div>
-</div>
+</dialog>
 
-<div class="modal-overlay" id="modal-credentials">
+<dialog class="modal-overlay" id="modal-credentials" aria-labelledby="modal-credentials-title">
     <div class="modal-window">
         <div class="modal-bar">
-            <div class="window-buttons">
+            <div class="window-buttons" aria-hidden="true">
                 <div class="dot dot-red"></div>
                 <div class="dot dot-yellow"></div>
                 <div class="dot dot-green"></div>
             </div>
-            <div class="window-title">show --credentials --all</div>
-            <span class="modal-close" onclick="closeModal('modal-credentials')">×</span>
+            <div class="window-title" id="modal-credentials-title" tabindex="-1">show --credentials --all</div>
+            <button type="button" class="modal-close" aria-label="Закрыть окно" onclick="closeModal('modal-credentials')">×</button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" tabindex="0">
+            <p class="comment">Сертификации и сертификаты обучения. Программы Sun TDC включали обучение и обязательный экзамен; TDC-004 — также лабораторные работы.</p>
             <ul class="cred-list">
                 <li><span class="year">2015</span> Data Domain Specialist (EMCDDS) <span class="vendor">— Dell Technologies</span></li>
                 <li><span class="year">2015</span> Information Storage Associate (EMCISA) <span class="vendor">— Dell Technologies</span></li>
@@ -763,20 +886,20 @@
             </ul>
         </div>
     </div>
-</div>
+</dialog>
 
-<div class="modal-overlay" id="modal-projects">
+<dialog class="modal-overlay" id="modal-projects" aria-labelledby="modal-projects-title">
     <div class="modal-window">
         <div class="modal-bar">
-            <div class="window-buttons">
+            <div class="window-buttons" aria-hidden="true">
                 <div class="dot dot-red"></div>
                 <div class="dot dot-yellow"></div>
                 <div class="dot dot-green"></div>
             </div>
-            <div class="window-title">cat enterprise_projects.db --full</div>
-            <span class="modal-close" onclick="closeModal('modal-projects')">×</span>
+            <div class="window-title" id="modal-projects-title" tabindex="-1">cat enterprise_projects.db --full</div>
+            <button type="button" class="modal-close" aria-label="Закрыть окно" onclick="closeModal('modal-projects')">×</button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" tabindex="0">
             <p><span class="accent-orange">2017 — наст. время :: Independent Consultant</span><br>
             Независимый аудит и проектирование корпоративных СХД и SAN-сетей. Анализ катастрофоустойчивости и оптимизация архитектурных решений для Mission-Critical систем.</p>
 
@@ -793,28 +916,48 @@
             Обеспечение бесперебойной работы опорной корпоративной сети передачи данных. Траблшутинг инцидентов на сетевом оборудовании.</p>
         </div>
     </div>
-</div>
+</dialog>
 
 <script>
+    const modalOpeners = new WeakMap();
+
     function openModal(id) {
-        document.getElementById(id).classList.add('active');
+        const dialog = document.getElementById(id);
+        if (!dialog || dialog.open || document.querySelector('.modal-overlay[open]')) return;
+        modalOpeners.set(dialog, document.activeElement);
+        dialog.showModal();
+        document.body.classList.add('modal-open');
+        dialog.querySelector('.modal-body').scrollTop = 0;
+        dialog.querySelector('.window-title').focus({ preventScroll: true });
     }
+
     function closeModal(id) {
-        document.getElementById(id).classList.remove('active');
+        const dialog = document.getElementById(id);
+        if (dialog && dialog.open) dialog.close();
     }
-    document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
-        overlay.addEventListener('click', function (e) {
-            if (e.target === overlay) overlay.classList.remove('active');
+
+    document.querySelectorAll('.modal-overlay').forEach(function (dialog) {
+        let startedOnBackdrop = false;
+        dialog.addEventListener('pointerdown', function (event) {
+            startedOnBackdrop = event.target === dialog;
         });
-    });
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-            document.querySelectorAll('.modal-overlay.active').forEach(function (o) {
-                o.classList.remove('active');
-            });
-        }
+        dialog.addEventListener('click', function (event) {
+            if (startedOnBackdrop && event.target === dialog) closeModal(dialog.id);
+            startedOnBackdrop = false;
+        });
+        dialog.addEventListener('cancel', function (event) {
+            event.preventDefault();
+            closeModal(dialog.id);
+        });
+        dialog.addEventListener('close', function () {
+            document.body.classList.remove('modal-open');
+            const opener = modalOpeners.get(dialog);
+            if (opener && opener.isConnected) opener.focus({ preventScroll: true });
+            modalOpeners.delete(dialog);
+        });
     });
 </script>
 
 </body>
 </html>
+
