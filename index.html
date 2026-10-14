@@ -669,6 +669,20 @@
         }
 
         .modal-bar .window-title { min-width: 0; }
+        .photo-language {
+            margin-left: 8px;
+            padding: 3px 6px;
+            min-width: 34px;
+            min-height: 28px;
+            flex-shrink: 0;
+            border: 1px solid var(--text-muted);
+            border-radius: 3px;
+            background: transparent;
+            color: var(--text-muted);
+            font: inherit;
+            font-size: 0.75em;
+            cursor: pointer;
+        }
         .modal-bar .window-buttons { flex-shrink: 0; }
         .terminal-body, .modal-body, .modal-bar .window-title {
             overflow-wrap: anywhere;
@@ -711,11 +725,11 @@
 
         <span class="prompt">denis@infra:~$</span><span class="command">get --target-links</span>
         <div class="output">
-            » YouTube: <a href="https://www.youtube.com/@Storage_DR_Architect" target="_blank" rel="me noopener noreferrer">Инженерный взгляд</a><br>
+            » YouTube: <a href="https://www.youtube.com/@Storage_DR_Architect" target="_blank" rel="me noopener noreferrer">Денис Ляшенко | Storage &amp; DR</a><br>
             » LinkedIn: <a href="https://www.linkedin.com/in/denislyashenko" target="_blank" rel="me noopener noreferrer">Denis Lyashenko</a><br>
-            » Telegram: <a href="https://t.me/DenisITLife_bot" target="_blank" rel="noopener noreferrer">DenisITLife</a><br>
             » ORCID: <a href="https://orcid.org/0009-0006-1469-4607" target="_blank" rel="me noopener noreferrer">0009-0006-1469-4607</a><br>
-            » GitHub: <a href="https://github.com/denis-infra" target="_blank" rel="me noopener noreferrer">denis-infra</a>
+            » GitHub: <a href="https://github.com/denis-infra" target="_blank" rel="me noopener noreferrer">denis-infra</a><br>
+            » Telegram: <a href="https://t.me/DenisITLife_bot" target="_blank" rel="noopener noreferrer">DenisITLife</a>
         </div>
 
         <div class="trigger-line">
@@ -756,10 +770,6 @@
             <span class="prompt">denis@infra:~$</span><span class="command">cat publications.md</span>
             <button type="button" class="reveal-trigger" aria-haspopup="dialog" aria-controls="modal-publications" onclick="openModal('modal-publications')">[Публикации и код]</button>
         </div>
-        <div class="output">
-            » Препринт: <a href="https://doi.org/10.2139/ssrn.7599458">Методика расчёта задержки Fibre Channel</a><br>
-            » Код: <a href="https://doi.org/10.5281/zenodo.23303372">Расчётный пакет Python, v1.0.0</a>
-        </div>
 
         <span class="prompt">denis@infra:~$</span><span class="cursor" aria-hidden="true"></span>
     </div>
@@ -773,7 +783,8 @@
                 <div class="dot dot-yellow"></div>
                 <div class="dot dot-green"></div>
             </div>
-            <div class="window-title" id="modal-photo-title" tabindex="-1">denis-lyashenko-profile.jpg</div>
+            <div class="window-title" id="modal-photo-title" tabindex="-1" lang="en" aria-live="polite">Denis Lyashenko</div>
+            <button type="button" class="photo-language" aria-controls="modal-photo-title" aria-label="Язык имени: английский. Переключить на русский" onclick="togglePhotoLanguage(this)">EN</button>
             <button type="button" class="modal-close" aria-label="Закрыть окно" onclick="closeModal('modal-photo')">×</button>
         </div>
         <div class="modal-body" tabindex="0">
@@ -947,6 +958,17 @@
 </dialog>
 
 <script>
+    function togglePhotoLanguage(button) {
+        const title = document.getElementById('modal-photo-title');
+        const russian = title.lang === 'en';
+        title.lang = russian ? 'ru' : 'en';
+        title.textContent = russian ? 'Денис Ляшенко' : 'Denis Lyashenko';
+        button.textContent = russian ? 'RU' : 'EN';
+        button.setAttribute('aria-label', russian
+            ? 'Язык имени: русский. Переключить на английский'
+            : 'Язык имени: английский. Переключить на русский');
+    }
+
     const modalOpeners = new WeakMap();
 
     function openModal(id) {
