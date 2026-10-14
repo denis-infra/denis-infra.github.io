@@ -393,6 +393,8 @@
             --bar-bg: #24283b;
         }
 
+        html { scrollbar-gutter: stable; }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -459,6 +461,16 @@
         .timeline-line {
             color: var(--text-main);
         }
+
+        .target-links, .timeline-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .timeline-list li + li { margin-top: 4px; }
+        .timeline-heading { font-size: 1em; font-weight: normal; margin: 0 0 8px; color: var(--text-muted); }
+        .timeline-list + .timeline-heading { margin-top: 16px; }
 
         .accent-orange { color: var(--accent-orange); }
 
@@ -531,6 +543,18 @@
             max-width: 420px;
         }
 
+        .modal-window.modal-snapshot-window {
+            max-width: 1100px;
+        }
+
+        .snapshot-return {
+            padding: 10px 20px;
+            border-top: 1px solid #292e42;
+            flex-shrink: 0;
+        }
+
+        .snapshot-return .reveal-trigger { margin-top: 0; }
+
         .modal-bar {
             display: flex;
             align-items: center;
@@ -568,6 +592,8 @@
         .modal-body {
             padding: 18px 20px;
             overflow-y: auto;
+            font-size: 0.95em;
+            line-height: 1.6;
         }
 
         .modal-body img {
@@ -590,7 +616,6 @@
 
         .command {
             color: #fff;
-            margin-bottom: 15px;
         }
 
         .output {
@@ -609,7 +634,7 @@
             line-height: inherit;
         }
         
-        /* Сохраняем поддержку старого спана на всякий случай */
+        /* Выделение ключевых терминов в тексте */
         span.output-highlight {
             color: var(--accent-cyan);
             font-weight: bold;
@@ -739,11 +764,14 @@
 
         <span class="prompt">denis@infra:~$</span><span class="command">get --target-links</span>
         <div class="output">
-            » YouTube: <a href="https://www.youtube.com/@Storage_DR_Architect" target="_blank" rel="me noopener noreferrer">Денис Ляшенко | Storage &amp; DR</a><br>
-            » LinkedIn: <a href="https://www.linkedin.com/in/denislyashenko" target="_blank" rel="me noopener noreferrer">Denis Lyashenko</a><br>
-            » ORCID: <a href="https://orcid.org/0009-0006-1469-4607" target="_blank" rel="me noopener noreferrer">0009-0006-1469-4607</a><br>
-            » GitHub: <a href="https://github.com/denis-infra" target="_blank" rel="me noopener noreferrer">denis-infra</a><br>
-            » Telegram: <a href="https://t.me/DenisITLife_bot" target="_blank" rel="noopener noreferrer">DenisITLife</a>
+            <ul class="target-links" role="list">
+                <li>» YouTube: <a href="https://www.youtube.com/@Storage_DR_Architect" target="_blank" rel="me noopener noreferrer">Денис Ляшенко | Storage &amp; DR</a></li>
+                <li>» LinkedIn: <a href="https://www.linkedin.com/in/denislyashenko" target="_blank" rel="me noopener noreferrer">Denis Lyashenko</a></li>
+                <li>» ORCID: <a href="https://orcid.org/0009-0006-1469-4607" target="_blank" rel="me noopener noreferrer">0009-0006-1469-4607</a></li>
+                <li>» GitHub: <a href="https://github.com/denis-infra" target="_blank" rel="me noopener noreferrer">denis-infra</a></li>
+                <li>» Telegram: <a href="https://t.me/DenisITLife_bot" target="_blank" rel="noopener noreferrer">DenisITLife</a></li>
+                <li>» Email: <a href="mailto:denis.it.archive@gmail.com">denis.it.archive@gmail.com</a></li>
+            </ul>
         </div>
 
         <div class="trigger-line">
@@ -862,15 +890,20 @@
             <button type="button" class="modal-close" aria-label="Закрыть окно" onclick="closeModal('modal-jobs')">×</button>
         </div>
         <div class="modal-body" tabindex="0">
-            <div class="timeline-line"><span class="accent-orange">2017 — наст. время</span> :: Independent Consultant — Storage & Disaster Recovery Architect</div>
-            <div class="timeline-line"><span class="accent-orange">2015–2017</span> :: ТОО «Транспортный холдинг города Алматы» — Senior IT Infrastructure Administrator</div>
-            <div class="timeline-line"><span class="accent-orange">2013–2015</span> :: Competent IT — Senior Enterprise Storage Infrastructure Engineer</div>
-            <div class="timeline-line"><span class="accent-orange">2007–2013</span> :: Eltal-Borlas Consulting — Senior Infrastructure Consultant (Sun/Oracle Solutions)</div>
-            <div class="timeline-line"><span class="accent-orange">2002–2007</span> :: Nursat — Network Infrastructure Support Engineer</div>
-            <br>
-            <div class="timeline-line">2000–2003 :: Алматинская Академия Экономики и Статистики — Bachelor's degree, IT Management</div>
-            <div class="timeline-line">1998–2000 :: Центральноазиатский технико-экономический колледж — Associate's degree, Systems Engineering</div>
-            <div class="timeline-line">1996–1998 :: Almaty College of Civil Aviation Service — Technical Diploma, Radio Communications</div>
+            <h2 class="timeline-heading" id="jobs-heading">Опыт работы</h2>
+            <ul class="timeline-list" role="list" aria-labelledby="jobs-heading">
+                <li class="timeline-line"><span class="accent-orange">2017 — наст. время</span> :: Independent Consultant — Storage & Disaster Recovery Architect</li>
+                <li class="timeline-line"><span class="accent-orange">2015–2017</span> :: ТОО «Транспортный холдинг города Алматы» — Senior IT Infrastructure Administrator</li>
+                <li class="timeline-line"><span class="accent-orange">2013–2015</span> :: Competent IT — Senior Enterprise Storage Infrastructure Engineer</li>
+                <li class="timeline-line"><span class="accent-orange">2007–2013</span> :: Eltal-Borlas Consulting — Senior Infrastructure Consultant (Sun/Oracle Solutions)</li>
+                <li class="timeline-line"><span class="accent-orange">2002–2007</span> :: Nursat — Network Infrastructure Support Engineer</li>
+            </ul>
+            <h2 class="timeline-heading" id="education-heading">Образование</h2>
+            <ul class="timeline-list" role="list" aria-labelledby="education-heading">
+                <li class="timeline-line">2000–2003 :: Алматинская Академия Экономики и Статистики — Bachelor's degree, IT Management</li>
+                <li class="timeline-line">1998–2000 :: Центральноазиатский технико-экономический колледж — Associate's degree, Systems Engineering</li>
+                <li class="timeline-line">1996–1998 :: Almaty College of Civil Aviation Service — Technical Diploma, Radio Communications</li>
+            </ul>
         </div>
     </div>
 </dialog>
@@ -958,17 +991,57 @@
                     <h3><a href="https://doi.org/10.2139/ssrn.7599458" lang="en">Deterministic Lower Bound of Fibre Channel Fabric Latency: A Reproducible Calculation Methodology from Datasheet Parameters for 32/64/128GFC (Gen 6/7/8)</a></h3>
                     <p>Denis Lyashenko · Препринт, SSRN · <time datetime="2026-10-12">12.10.2026</time> · CC BY 4.0</p>
                     <p class="comment">DOI: 10.2139/ssrn.7599458</p>
-                    <p><a href="/images/ssrn-7599458.jpg">Снимок страницы публикации</a></p>
+                    <p><a href="/images/ssrn-7599458.jpg" data-snapshot-modal="modal-ssrn-snapshot" aria-haspopup="dialog" aria-controls="modal-ssrn-snapshot">Снимок страницы публикации</a></p>
                 </li>
                 <li>
                     <h3><a href="https://doi.org/10.5281/zenodo.23303372" lang="en">Fibre Channel Fabric Latency Lower Bounds Computational Package</a></h3>
                     <p>Denis Lyashenko · Код, Zenodo · <time datetime="2026-10-12">12.10.2026</time> · v1.0.0 · Python · MIT</p>
                     <p>Расчётный пакет для воспроизведения численных результатов препринта.</p>
                     <p class="comment">DOI: 10.5281/zenodo.23303372</p>
-                    <p><a href="/images/zenodo-23303372.jpg">Снимок страницы публикации</a></p>
+                    <p><a href="/images/zenodo-23303372.jpg" data-snapshot-modal="modal-zenodo-snapshot" aria-haspopup="dialog" aria-controls="modal-zenodo-snapshot">Снимок страницы публикации</a></p>
                 </li>
             </ul>
         </section>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="modal-overlay" id="modal-ssrn-snapshot" data-parent-modal="modal-publications" aria-labelledby="modal-ssrn-snapshot-title">
+    <div class="modal-window modal-snapshot-window">
+        <div class="modal-bar">
+            <div class="window-buttons" aria-hidden="true">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div class="window-title" id="modal-ssrn-snapshot-title" tabindex="-1">Снимок страницы SSRN</div>
+            <button type="button" class="modal-close" aria-label="Закрыть снимок SSRN и вернуться к публикациям" onclick="closeModal('modal-ssrn-snapshot')">×</button>
+        </div>
+        <div class="modal-body" tabindex="0">
+            <img src="/images/ssrn-7599458.jpg" alt="Снимок страницы препринта Дениса Ляшенко на SSRN" width="1171" height="1048" loading="lazy">
+        </div>
+        <div class="snapshot-return">
+            <button type="button" class="reveal-trigger" onclick="closeModal('modal-ssrn-snapshot')">← К публикациям</button>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="modal-overlay" id="modal-zenodo-snapshot" data-parent-modal="modal-publications" aria-labelledby="modal-zenodo-snapshot-title">
+    <div class="modal-window modal-snapshot-window">
+        <div class="modal-bar">
+            <div class="window-buttons" aria-hidden="true">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div class="window-title" id="modal-zenodo-snapshot-title" tabindex="-1">Снимок страницы Zenodo</div>
+            <button type="button" class="modal-close" aria-label="Закрыть снимок Zenodo и вернуться к публикациям" onclick="closeModal('modal-zenodo-snapshot')">×</button>
+        </div>
+        <div class="modal-body" tabindex="0">
+            <img src="/images/zenodo-23303372.jpg" alt="Снимок страницы расчётного пакета Дениса Ляшенко на Zenodo" width="1306" height="706" loading="lazy">
+        </div>
+        <div class="snapshot-return">
+            <button type="button" class="reveal-trigger" onclick="closeModal('modal-zenodo-snapshot')">← К публикациям</button>
         </div>
     </div>
 </dialog>
@@ -989,7 +1062,11 @@
 
     function openModal(id) {
         const dialog = document.getElementById(id);
-        if (!dialog || dialog.open || document.querySelector('.modal-overlay[open]')) return;
+        if (!dialog || dialog.open) return;
+        const openDialogs = Array.from(document.querySelectorAll('.modal-overlay[open]'));
+        const parentId = dialog.dataset.parentModal;
+        if (openDialogs.length && (openDialogs.length !== 1 || openDialogs[0].id !== parentId)) return;
+        if (parentId && !openDialogs.length) return;
         modalOpeners.set(dialog, document.activeElement);
         dialog.showModal();
         document.body.classList.add('modal-open');
@@ -1001,6 +1078,14 @@
         const dialog = document.getElementById(id);
         if (dialog && dialog.open) dialog.close();
     }
+
+    document.querySelectorAll('a[data-snapshot-modal]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            openModal(link.dataset.snapshotModal);
+        });
+    });
 
     document.querySelectorAll('.modal-overlay').forEach(function (dialog) {
         let startedOnBackdrop = false;
@@ -1030,7 +1115,7 @@
             closeModal(dialog.id);
         });
         dialog.addEventListener('close', function () {
-            document.body.classList.remove('modal-open');
+            if (!document.querySelector('.modal-overlay[open]')) document.body.classList.remove('modal-open');
             const opener = modalOpeners.get(dialog);
             if (opener && opener.isConnected) opener.focus({ preventScroll: true });
             modalOpeners.delete(dialog);
@@ -1040,4 +1125,5 @@
 
 </body>
 </html>
+
 
